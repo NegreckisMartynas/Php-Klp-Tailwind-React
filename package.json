@@ -1,0 +1,31 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node index.js",
+    "start": "concurrently --kill-others \"npm run tailwind\" \"npm run react\"",
+    "tailwind": "nodemon --ext html,css,js",
+    "react": "npx webpack --config webpack.config.js --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
+    "express": "^4.18.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "devDependencies": {
+    "connect-livereload": "^0.6.1",
+    "ejs": "^3.1.8",
+    "livereload": "^0.9.3",
+    "nodemon": "^2.0.16",
+    "tailwindcss": "^3.1.4"
+  }
+}
