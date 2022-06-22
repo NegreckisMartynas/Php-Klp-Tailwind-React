@@ -1,15 +1,17 @@
 export default () => {
     return <table>
                 <thead>
-                    <th>
-                        ID
-                    </th>
-                    <th>
-                        Name
-                    </th>
-                    <th>
-                        Country
-                    </th>
+                    <tr>
+                        <th>
+                            ID
+                        </th>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Country
+                        </th>
+                    </tr>
                 </thead>
                 <tbody>
                     <tr>

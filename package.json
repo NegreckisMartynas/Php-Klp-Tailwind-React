@@ -5,8 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "node index.js",
-    "start": "concurrently --kill-others \"npm run tailwind\" \"npm run react\"",
-    "tailwind": "nodemon --ext html,css,js",
+    "start": "concurrently --kill-others \"npm run watch\" \"npm run tailwind\" \"npm run react\"",
+    "watch": "nodemon --ext html,css,js",
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./static/main.css --watch",
     "react": "npx webpack --config webpack.config.js --watch"
   },
   "author": "",
@@ -22,6 +23,7 @@
     "webpack-cli": "^4.10.0"
   },
   "devDependencies": {
+    "concurrently": "^7.2.2",
     "connect-livereload": "^0.6.1",
     "ejs": "^3.1.8",
     "livereload": "^0.9.3",

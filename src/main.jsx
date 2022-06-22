@@ -1,4 +1,4 @@
-import Table from './Table.jsx';
+import Table from './components/Table.jsx';
 
 
 let domContainer = document.querySelector('#react-table');
