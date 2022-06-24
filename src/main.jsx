@@ -1,4 +1,4 @@
-import Table from './components/Table.jsx';
+import {Table} from './components';
 import data from './data/table-data.js';
 
 
