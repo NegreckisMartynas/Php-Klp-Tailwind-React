@@ -1,8 +1,10 @@
 export default (tableData, classNames ) => {
-    return <table className="border-collapse border-2 border-slate-700/50">
-                {header(tableData?.headers, classNames)}
-                {body(tableData?.headers, tableData?.body)} 
-            </table>
+    return  <div className="border-2 border-slate-700/50 rounded-t-md">
+                <table>
+                    {header(tableData?.headers, classNames)}
+                    {body(tableData?.headers, tableData?.body)} 
+                </table>
+            </div>
 }
 
 const header = (headers, classNames)  => {
@@ -10,7 +12,7 @@ const header = (headers, classNames)  => {
         return <thead >
                     <tr>
                         {headers.map(col =>
-                            <th key={col.label} className="border-x border-y-2 border-slate-700/50 bg-slate-300/50">
+                            <th key={col.label} className="border-b-2 first:border-r last:border-l border-slate-700/50 bg-slate-300/50">
                                 {col.label}
                             </th>
                         )}
@@ -30,9 +32,9 @@ const body = (headers, body) => {
 }
 
 const row = (rowData) => {
-    return  <tr key={rowData} className="bg-slate-100/50 even:bg-slate-200/50 hover:bg-slate-400/50">
+    return  <tr key={rowData} className="bg-slate-100/50 even:bg-slate-200/50 hover:bg-slate-400/50 border-y last:border-t">
                 {rowData.map( col => 
-                    <td key={col} className="border border-slate-700/50 px-2">
+                    <td key={col} className="border-x first:border-r last:border-l border-slate-300/50 px-2">
                         {col}
                     </td>
                 )}
